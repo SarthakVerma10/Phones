@@ -1,0 +1,22 @@
+POST  http://localhost:3001/api/create
+content-type: application/json
+
+{
+    "name": "Motorola G30S", 
+    "year_bought": 2015, 
+    "year_sold": 2018, 
+    "img": "will add later", 
+    "os": "android 7"
+}
+
+###
+
+GET  http://localhost:3001/delete/6
+
+###
+Get GET  http://localhost:3001/update/2
+Content-Type: application/json
+
+{
+    "name": "updated name"
+}

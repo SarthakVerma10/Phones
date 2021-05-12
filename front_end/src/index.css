@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  background-color: #EAF3FA;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboard {
+  height: 100vh;
+  background-color: #EAF3FA;
+  display: flex;
+  padding: 1em;
+  margin: auto;
+}
+
+.dashboard div {
+  width: 20%;
+  padding: 10%;
+}
+
+.dashboard h1 {
+  margin-bottom: 5%;
+  text-shadow: 
+  -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 
+  -1px -1px black, 1px 1px black, -1px 1px black, 1px -1px black;
+}
+
+.dashboard button {
+  padding: 0.5em 1.5em;
+  font-size: 3vw;
+}
+
+.dashboard a {
+  text-decoration: none;
+}
+
+.add-container {
+  padding-top: 5%;
+  text-align: center;
+}
+
+.form :last-child{ 
+  margin-bottom: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+}
+
+.phone {
+  padding: 2em;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .dashboard {
+    flex-direction:column-reverse;
+    justify-content: center;
+    padding-top: 15%;
+    height: 100%;
+  }
+
+  .dashboard div {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard h1 {
+    font-size: 2em
+  }
+
+  .dashboard button {
+    font-size: 5vw;
+  }
+}
