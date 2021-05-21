@@ -68,4 +68,4 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'front_end/build/index.html'))
 })
 
-app.listen(port, () => console.log('phone server running at ', port))
+app.listen(process.env.PORT || port, () => console.log('phone server running at ', port))
