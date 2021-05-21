@@ -3,12 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 const useStyles = makeStyles({
     root: {
-      width: '20em',
-      margin: '2em'
-    },
-    media: {
-      height: 300,
-    },
+      
+    }
   });
 
 export default function Phone() {
@@ -21,12 +17,13 @@ export default function Phone() {
         fetch('/api/all')
         .then(res=> res.json())
         .then(result => {
+            console.log('result: ', result);
             setData(result)
             setLoadPhones(true)
         })
     }
     const remove = (id) => {
-        const url = 'http://localhost:3001/api/delete/' + id
+        const url = '/api/delete/' + id
         fetch(url)
             .then(res => res.json())
             .then(result => console.log('result: ', result))
@@ -54,7 +51,6 @@ export default function Phone() {
                     variant="outlined"
                     className={classes.root}>
                         <CardMedia
-                        className={classes.media}
                         image={each.img}
                         title={each.name}
                         />

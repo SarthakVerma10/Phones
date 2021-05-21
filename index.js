@@ -13,11 +13,18 @@ app.use(bodyParser.json())
 
 const mysql = require('mysql')
 
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '1234',
+//     database: 'phone'
+// })
+
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    database: 'phone'
+    host: 'remotemysql.com',
+    user: 'wqtyhsokuT',
+    password: 'a3LNqE8lq1',
+    database: 'wqtyhsokuT'
 })
 
 connection.connect((err) => {

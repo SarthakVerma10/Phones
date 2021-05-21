@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 70%;
+
   margin: auto;
   justify-content: center;
 }
