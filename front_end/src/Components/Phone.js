@@ -1,5 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardMedia, CircularProgress, makeStyles, Typography} from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { PhoneContext } from '../index'
 
 const useStyles = makeStyles({
     root: {
@@ -8,19 +9,13 @@ const useStyles = makeStyles({
   });
 
 export default function Phone() {
-    const [loadPhones, setLoadPhones] = useState(false)
-    const [data, setData] = useState([])
+    //const [loadPhones, setLoadPhones] = useState(false)
+    //const [data, setData] = useState([])
+
+    const phone = useContext(PhoneContext)
 
     const classes = useStyles()
 
-    const getData = () => {
-        fetch('http://localhost:3001/api/all')
-        .then(res=> res.json())
-        .then(result => {
-            setData(result)
-            setLoadPhones(true)
-        })
-    }
     const remove = (id) => {
         const url = '/api/delete/' + id;
         console.log('delete: ', id);
@@ -29,10 +24,6 @@ export default function Phone() {
             .then(result => console.log('result: ', result))
     }
 
-    useEffect(() => {
-        getData()
-    })
-
     return (
         <div className="phone">
         <Typography
@@ -40,11 +31,9 @@ export default function Phone() {
         className="center">
         Devices
         </Typography>
-        {loadPhones
-            ?
             <div 
             className="cards-container">
-            {data.map((each) => {
+            {phone.map((each) => {
                 return (
                     <Card 
                     key={each.id}
@@ -87,10 +76,8 @@ export default function Phone() {
             })}
             </div>
             :
-            <div>
-            <CircularProgress color="secondary"/>
-            </div>
-        }
+            Loading
+
         </div>
     )
 }
