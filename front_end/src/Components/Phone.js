@@ -75,9 +75,6 @@ export default function Phone() {
                 )
             })}
             </div>
-            :
-            Loading
-
         </div>
     )
 }
