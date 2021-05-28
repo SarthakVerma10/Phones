@@ -20,7 +20,7 @@ export default function Dashboard() {
     const setPhoneDetails = useContext(PhoneDispatchContext)
 
     const addContext = () => {
-        fetch('http://localhost:3001/api/all')
+        fetch('/api/all')
           .then(res => res.json())
           .then(rel => {
               setPhoneDetails(rel)
