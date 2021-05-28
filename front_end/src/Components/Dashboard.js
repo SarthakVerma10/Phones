@@ -17,7 +17,6 @@ export default function Dashboard() {
         <ThemeProvider theme={theme}>
         <img 
         src={hero} 
-        style={{}} 
         alt="hero phone"
         className="dashboard-img">
         </img>

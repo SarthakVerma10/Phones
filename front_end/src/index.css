@@ -62,9 +62,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   margin: auto;
   justify-content: center;
+}
+
+.card {
+  margin: 5vw;
+  width: 20%;
+  padding: 2em 1em;
 }
 
 .phone {
@@ -76,7 +81,6 @@ body {
   .dashboard {
     flex-direction:column-reverse;
     justify-content: center;
-    padding-top: %;
     height: 100vh;
   }
 
@@ -96,5 +100,16 @@ body {
 
   .dashboard button {
     font-size: 5vw;
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1em 0;
+    margin: auto;
+    margin-bottom: 1vh;
   }
 }

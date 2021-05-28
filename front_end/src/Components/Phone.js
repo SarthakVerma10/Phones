@@ -14,10 +14,9 @@ export default function Phone() {
     const classes = useStyles()
 
     const getData = () => {
-        fetch('/api/all')
+        fetch('http://localhost:3001/api/all')
         .then(res=> res.json())
         .then(result => {
-            console.log('result: ', result);
             setData(result)
             setLoadPhones(true)
         })
@@ -50,11 +49,12 @@ export default function Phone() {
                     <Card 
                     key={each.id}
                     variant="outlined"
-                    className={classes.root}>
+                    className="card">
                         <CardMedia
                         image={each.img}
                         title={each.name}
                         />
+                        <img src={each.img} ></img>
                         <CardContent>
                             <Typography 
                             variant="h5"
