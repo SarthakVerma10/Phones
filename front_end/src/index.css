@@ -76,8 +76,12 @@ body {
   .dashboard {
     flex-direction:column-reverse;
     justify-content: center;
-    padding-top: 15%;
-    height: 100%;
+    padding-top: %;
+    height: 100vh;
+  }
+
+  .dashboard-img {
+    height: 50vh;
   }
 
   .dashboard div {

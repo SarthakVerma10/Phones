@@ -23,7 +23,8 @@ export default function Phone() {
         })
     }
     const remove = (id) => {
-        const url = '/api/delete/' + id
+        const url = '/api/delete/' + id;
+        console.log('delete: ', id);
         fetch(url)
             .then(res => res.json())
             .then(result => console.log('result: ', result))

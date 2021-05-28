@@ -18,7 +18,8 @@ export default function Dashboard() {
         <img 
         src={hero} 
         style={{}} 
-        alt="hero phone">
+        alt="hero phone"
+        className="dashboard-img">
         </img>
         <div>
             <Typography 
